@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8">
     <title>Electron GRPC test</title>
-    <script type="text/javascript" src="page.js"></script>
   </head>
   <body>
     <h1>Setup</h1>
@@ -35,5 +34,28 @@
     <h1>Force Propose</h1>
     <p>If your node is taking too long to propose a block, you can force it.</p>
     <button id="propose">Propose Block Now</button>
+
+<script type="module">
+import statusPage from './page.js';
+
+window.addEventListener("DOMContentLoaded", () => {
+  const byId = id => document.getElementById(id);
+  const ui = {
+    nameBox: byId("name"),
+    registerButton: byId("register"),
+    newStatusBox: byId("new-status"),
+    setStatusButton: byId("set-status"),
+
+    friendBox: byId("friend-name"),
+    checkButton: byId("check-status"),
+    friendStatusP: byId("friend-status"),
+
+    proposeButton: byId("propose"),
+  };
+
+  statusPage(ui, fetch);
+});
+
+</script>
   </body>
 </html>

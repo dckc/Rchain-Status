@@ -1,8 +1,8 @@
 {
-  "name": "Electron-Rchain-DApp",
-  "version": "1.0.0",
-  "description": "Use rchain with electron",
-  "main": "main.js",
+  "name": "rchain-status",
+  "version": "0.1.0",
+  "description": "Example social status app using RChain",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint --format unix --ignore-pattern node_modules/ server.js",
@@ -22,8 +22,9 @@
     "eslint-plugin-import": "^2.14.0"
   },
   "dependencies": {
+    "body-parser": "^1.18.2",
     "express": "^4.16.3",
     "grpc": "^1.14.1",
-    "rchain-api": "git://github.com/dckc/RChain-API.git#d2f9fdd"
+    "rchain-api": "git://github.com/dckc/RChain-API.git#b138707"
   }
 }
